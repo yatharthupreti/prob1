@@ -1,0 +1,84 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+33.3.......................................................................................................................................................................................................3!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipment Information</title>
+    <style>
+        .box {
+            border: 1px solid #000;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <label for="equipmentName">Equipment Name:</label>
+        <input type="text" id="equipmentName" placeholder="Enter equipment name">
+        
+        <label for="quantity">Quantity:</label>
+        <input type="text" id="quantity" placeholder="Enter quantity">
+
+        <button onclick="addEquipment()">Add Equipment</button>
+    </div>
+
+    <div id="outputBox" class="box"></div>
+
+    <script>
+        var equipmentList = [];
+
+        function addEquipment() {
+            var equipmentName = document.getElementById("equipmentName").value;
+            var quantity = document.getElementById("quantity").value;
+
+            var equipmentEntry = {
+                name: equipmentName,
+                quantity: quantity
+            };
+
+            equipmentList.push(equipmentEntry);
+            displayEquipment();
+        }
+
+        function displayEquipment() {
+            var outputBox = document.getElementById("outputBox");
+            outputBox.innerHTML = "";
+
+            equipmentList.forEach(function(entry, index) {
+                outputBox.innerHTML += "<p>Serial No: " + (index + 1) + "</p>";
+                outputBox.innerHTML += "<p>Equipment: " + entry.name + "</p>";
+                outputBox.innerHTML += "<p>Quantity: " + entry.quantity + "</p>";
+                outputBox.innerHTML += "<hr>";
+            });
+        }
+    </script>
+
+</body>
+</html>

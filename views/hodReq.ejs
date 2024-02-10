@@ -1,0 +1,102 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proforma for Financial Approval</title>
+    <style>
+
+        
+        /* Add your own CSS styling here */
+        body {
+            background-color:rgb(208, 208, 250);
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Proforma for Financial Approval</h2>
+
+    <form>
+        <label for="indenterName">Name of the Indenter:</label>
+        <input type="text" id="indenterName" name="indenterName" required>
+
+        <label for="designation">Designation:</label>
+        <input type="text" id="designation" name="designation" required>
+
+        <label for="department">Department:</label>
+        <input type="text" id="department" name="department" required>
+
+        <label for="purpose">Purpose & Justification:</label>
+        <textarea id="purpose" name="purpose" rows="4" required></textarea>
+
+        <label for="amount">Amount Rs.:</label>
+        <input type="number" id="amount" name="amount" required>
+
+        <label for="accountHead">Account Head of Expenditure:</label>
+        <input type="text" id="accountHead" name="accountHead" required>
+
+        <label for="yearOfSanction">Year of Sanction:</label>
+        <input type="text" id="yearOfSanction" name="yearOfSanction" required>
+
+        <label for="allocation">Allocation (Rs.):</label>
+        <input type="number" id="allocation" name="allocation" required>
+
+        <label for="totalApprovalSought">Total approval Sought before this approval (Rs.):</label>
+        <input type="number" id="totalApprovalSought" name="totalApprovalSought">
+
+        <label for="schemeName">Name of the Scheme:</label>
+        <input type="text" id="schemeName" name="schemeName">
+
+        <label for="sponsoringAgency">Name of the Sponsoring Agency:</label>
+        <input type="text" id="sponsoringAgency" name="sponsoringAgency">
+
+        <label>Mode of tendering (In case of purchase of goods/services is involved):</label>
+        <label><input type="checkbox" name="directPurchase"> upto Rs.25,000</label>
+        <label><input type="checkbox" name="localPurchase">  Upto Rs.1,00,000
+        </label>
+        <label><input type="checkbox" name="limitedTender"> Above Rs.1,00,000 </label>
+        <label><input type="checkbox" name="approved"> Approved</label>
+
+
+        <!-- <label><input type="checkbox" name="advertisedTender"></label>
+        <label><input type="checkbox" name="singleTender"> Single tender (Justification to be enclosed)</label> -->
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            // Add logic to handle form submission (e.g., send data to server)
+            alert('Form submitted!');
+        }
+    </script>
+</body>
+</html>

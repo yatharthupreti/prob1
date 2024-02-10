@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipment Notification and Approval</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+
+        .notification {
+            background-color: #d4d4fa;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .equipment-details {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Notification Section -->
+        <div class="notification">
+            <h4>Notification:</h4>
+            <p>New equipment transaction approval on Dean's webpage. Click for details.</p>
+            <!-- Bootstrap btn class -->
+            <button class="btn btn-primary" onclick="showDetails()">View Details</button>
+        </div>
+
+        <!-- Equipment Details Section (Initially Hidden) -->
+        <div class="equipment-details" id="equipmentDetails" style="display: none;">
+            <h2>Equipment Transaction Approval Details</h2>
+            <p><strong>Name of the Indenter:</strong> </p>
+            <p><strong>Designation:</strong> </p>
+            <p><strong>Department Name:</strong> </p>
+            <p><strong>Equipment Name:</strong> </p>
+            <p><strong>Transaction Type:</strong></p>
+            <p><strong>Amount Rs:</strong> </p>
+            <p><strong>Year of sanction</strong> </p>
+            <p><strong>Allocation Rs</strong> </p>
+            <p><strong>Total approval sought before this approval(Rs)</strong> </p>
+            <p><strong>Requested by:</strong> </p>
+            <p><strong>Name of scheme</strong> </p>
+            <p><strong>Name of sponsoring Agency</strong></p>
+            <p><strong>Transaction Date:</strong> February 15, 2024</p>
+            <p><input type="checkbox" name="approved"> Approved</p>
+            <button style="background-color:greenyellow" type="button" onclick="submitForm()">Submit</button>
+            
+            <!-- Additional details can be added based on your requirements -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        function showDetails() {
+            // Show the equipment details section when the button is clicked
+            document.getElementById('equipmentDetails').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
